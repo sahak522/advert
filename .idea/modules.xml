@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/advert.iml" filepath="$PROJECT_DIR$/.idea/advert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/advert.iml" filepath="$PROJECT_DIR$/advert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/advert-web/advert (1).iml" filepath="$PROJECT_DIR$/advert-web/advert (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/advert-core/advert-core.iml" filepath="$PROJECT_DIR$/advert-core/advert-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/advert-web/advert-web.iml" filepath="$PROJECT_DIR$/advert-web/advert-web.iml" />
     </modules>
   </component>
 </project>
