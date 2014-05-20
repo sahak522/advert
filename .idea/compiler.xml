@@ -23,7 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="advert (1)" />
-        <module name="advert-core" />
+        <module name="advert-core-models" />
+        <module name="advert-core-repositories" />
+        <module name="advert-core-services" />
+        <module name="advert-core-services-test" />
+        <module name="advert-core-shared" />
+        <module name="advert-core1-model" />
         <module name="advert-web" />
       </profile>
     </annotationProcessing>
