@@ -6,53 +6,24 @@
         <artifactId>advert</artifactId>
         <groupId>com.advert</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>advert-core</artifactId>
+    <packaging>pom</packaging>
 
-    <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
+    <properties>
+        <main.project.dir>${project.basedir}/../../</main.project.dir>
+    </properties>
 
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.0.2</version>
-                <configuration>
-                    <includes>
-                        <include>**/advert-core/**</include>
-                    </includes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>advert-core-models</module>
+        <module>advert-core-repositories</module>
+        <module>advert-core-services</module>
+        <module>advert-core-services-test</module>
+        <module>advert-core-shared</module>
+    </modules>
 
-    <dependencies>
-        <!-- SPRING FRAMEWORK -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${org.springframework.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${org.springframework.version}</version>
-        </dependency>
-
-        <!-- LOGGING DEPENDENCIES - LOG4J -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-
-    </dependencies>
 
 </project>
