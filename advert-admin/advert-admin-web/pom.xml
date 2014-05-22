@@ -11,6 +11,6 @@
 
     <groupId>com.advert</groupId>
     <artifactId>advert-admin-web</artifactId>
-    <!--<packaging>war</packaging>-->
+    <packaging>war</packaging>
 
 </project>
