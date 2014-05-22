@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by sahak_000 on 21.05.2014.
  */
-public interface UserDao1 {
+public interface UserDao {
 
     public User findOne(long id);
 
