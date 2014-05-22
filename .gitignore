@@ -2,8 +2,13 @@
 
 #folders#
 #/.idea/
+<<<<<<< HEAD
 *.iws
 *.iml
+=======
+#*.iws
+#*.iml
+>>>>>>> dev
 target/
 log/
 */META-INF/*
