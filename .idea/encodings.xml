@@ -2,15 +2,16 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/advert-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/advert-admin/advert-admin-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advert-core" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/advert-core/advert-core-models" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/advert-core/advert-core-models" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advert-core/advert-core-models" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advert-core/advert-core-repositories" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advert-core/advert-core-services" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advert-core/advert-core-services-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advert-core/advert-core-shared" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/advert-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/advert-web/advert-website" charset="UTF-8" />
   </component>
 </project>
 

@@ -7,7 +7,8 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/advert-web" />
+    <file type="web" url="file://$PROJECT_DIR$/advert-admin/advert-admin-web" />
+    <file type="web" url="file://$PROJECT_DIR$/advert-web/advert-website" />
   </component>
   <component name="IdProvider" IDEtalkID="633C65642253A885EE1F917E193BCABA" />
   <component name="MavenProjectsManager">
@@ -23,6 +24,7 @@
         <option value="$PROJECT_DIR$/advert-core/advert-core-model/pom.xml" />
         <option value="$PROJECT_DIR$/advert-core/advert-core-shared/pom.xml" />
         <option value="$PROJECT_DIR$/advert-core1/pom.xml" />
+        <option value="$PROJECT_DIR$/advert-web/advert-website/pom.xml" />
       </set>
     </option>
   </component>
