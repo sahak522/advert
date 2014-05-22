@@ -1,18 +1,16 @@
 package com.advert.repositories.impl;
 
 import com.advert.models.User;
-import com.advert.repositories.UserDao1;
+import com.advert.repositories.UserDao;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 /**
  * Created by sahak_000 on 21.05.2014.
  */
 @Repository("user")
-public class UserDAOImpl1 extends AbstractJpaDAO<User> implements UserDao1 {
+public class UserDaoImpl extends AbstractJpaDAO<User> implements UserDao {
 
-    public UserDAOImpl1() {
+    public UserDaoImpl() {
         super();
         setClazz(User.class);
     }
