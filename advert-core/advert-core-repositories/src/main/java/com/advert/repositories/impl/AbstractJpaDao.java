@@ -10,7 +10,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-public abstract class AbstractJpaDao1<T extends Serializable> {
+public abstract class AbstractJpaDao<T extends Serializable> {
 
     protected Class<T> clazz;
 
