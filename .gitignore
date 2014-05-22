@@ -1,14 +1,9 @@
 *.class
 
 #folders#
-#/.idea/
-<<<<<<< HEAD
+/.idea/
 *.iws
 *.iml
-=======
-#*.iws
-#*.iml
->>>>>>> dev
 target/
 log/
 */META-INF/*
