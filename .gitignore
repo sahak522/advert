@@ -1,9 +1,9 @@
 *.class
 
 #folders#
-/.idea/
-*.iws
-*.iml
+#/.idea/
+#*.iws
+#*.iml
 target/
 log/
 */META-INF/*
