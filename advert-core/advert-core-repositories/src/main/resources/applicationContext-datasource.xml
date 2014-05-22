@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dbProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:/com/advert/defaults/db.properties</value>
+                <value>file:${user.home}/.advert/database.properties</value>
+            </list>
+        </property>
+        <property name="ignoreResourceNotFound" value="true"/>
+    </bean>
+
+    <bean id="dataSourceMain" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" lazy-init="true">
+        <property name="driverClass" value="#{dbProperties['jdbc.driver']}"/>
+        <property name="jdbcUrl" value="#{dbProperties['jdbc.url']}"/>
+        <property name="user" value="#{dbProperties['jdbc.username']}"/>
+        <property name="password" value="#{dbProperties['jdbc.password']}"/>
+        <property name="acquireIncrement" value="#{dbProperties['c3p0.acquire_increment']}"/>
+        <property name="initialPoolSize" value="#{dbProperties['c3p0.initialSize']}"/>
+        <property name="maxPoolSize" value="#{dbProperties['c3p0.maxActive']}"/>
+        <property name="maxStatements" value="#{dbProperties['c3p0.maxStatements']}"/>
+    </bean>
+
+    <bean id="dataSource" class="org.jdbcdslog.ConnectionPoolDataSourceProxy">
+        <property name="targetDSDirect" ref="dataSourceMain"/>
+    </bean>
+
+    <!--entity Manager Factory-->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="persistenceUnitName" value="advertPersistenceUnit"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>
+                <prop key="hibernate.dialect">#{dbProperties['hibernate.dialect']}</prop>
+                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+                <prop key="hibernate.show_sql">#{dbProperties['hibernate.show_sql']}</prop>
+                <prop key="hibernate.format_sql">#{dbProperties['hibernate.format_sql']}</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>

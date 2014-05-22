@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.advert</groupId>
+        <artifactId>advert-web</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <name>advert-website</name>
+	<groupId>com.advert</groupId>
+	<artifactId>advert-website</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<description></description>
+
+
+	<dependencies>
+		<!--  WICKET DEPENDENCIES -->
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-core</artifactId>
+			<version>${wicket.version}</version>
+		</dependency>
+		<!-- OPTIONAL DEPENDENCY -->
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-extensions</artifactId>
+			<version>${wicket.version}</version>
+		</dependency>
+
+
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-archetype-quickstart</artifactId>
+            <version>7.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--  JETTY DEPENDENCIES FOR TESTING  -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty9.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-webapp</artifactId>
+            <version>${jetty9.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-util</artifactId>
+            <version>${jetty9.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jmx</artifactId>
+            <version>${jetty9.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--  JUNIT DEPENDENCY FOR TESTING -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- MAIN CORE-->
+        <dependency>
+            <groupId>com.advert</groupId>
+            <artifactId>advert-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
