@@ -6,11 +6,115 @@
         <artifactId>advert-admin</artifactId>
         <groupId>com.advert</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.advert</groupId>
     <artifactId>advert-admin-web</artifactId>
     <packaging>war</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <!--javax.servlet section-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${javax.servlet.version}</version>
+        </dependency>
+        <!--End javax.servlet section-->
+
+        <!--Wicket Section -->
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-core</artifactId>
+            <version>${wicket.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-util</artifactId>
+            <version>${wicket.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-spring</artifactId>
+            <version>${wicket.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-auth-roles</artifactId>
+            <version>${wicket.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.wicketstuff</groupId>
+            <artifactId>wicketstuff-shiro</artifactId>
+            <version>${wicket.shiro.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-extensions</artifactId>
+            <version>${wicket.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.wicket</groupId>
+            <artifactId>wicket-datetime</artifactId>
+            <version>${wicket.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.wicketstuff</groupId>
+            <artifactId>wicketstuff-annotation</artifactId>
+            <version>${wicket.shiro.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.wicket</groupId>
+                    <artifactId>wicket</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.wicketstuff</groupId>
+            <artifactId>wicketstuff-tinymce</artifactId>
+            <version>${wicket.shiro.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.wicket</groupId>
+                    <artifactId>wicket</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.advert</groupId>
+            <artifactId>advert-core-services</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>

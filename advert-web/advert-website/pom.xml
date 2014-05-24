@@ -9,6 +9,7 @@
         <groupId>com.advert</groupId>
         <artifactId>advert-web</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
     </parent>
 
     <name>advert-website</name>
@@ -17,6 +18,35 @@
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<description></description>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <excludes>
+                            <exclude>logback.xml</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>production</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources</directory>
+                        <excludes>
+                            <exclude>logback-test.xml</exclude>
+                        </excludes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
 
 
 	<dependencies>
@@ -81,5 +111,21 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
 
 </project>

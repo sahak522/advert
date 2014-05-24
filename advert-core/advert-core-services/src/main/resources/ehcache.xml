@@ -1,0 +1,16 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="true" monitoring="autodetect"
+         dynamicConfig="true">
+
+    <cache name="methodCache"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="86400"
+           copyOnRead="true"
+           copyOnWrite="true"
+           statistics="true"
+           maxBytesLocalHeap="100M">
+        <persistence strategy="none"/>
+    </cache>
+
+</ehcache>
