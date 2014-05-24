@@ -1,14 +1,11 @@
 *.class
 
-#folders#
 /.idea/
 *.iws
 *.iml
 target/
 log/
 */META-INF/*
-
-# Packaged files #
 *.jar
 *.war
 *.ear

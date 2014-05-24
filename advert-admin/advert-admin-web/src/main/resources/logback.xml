@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" debug="true">
+    <property file="${user.home}/.taxpayer/taxpayer.properties"/>
+    <contextName>taxpayer</contextName>
+
+    <!-- Writes Logback notifications (like mail errors) to the console (catalina.out in this case) -->
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+
+
+    <appender name="MAIN" class="ch.qos.logback.core.rolling.RollingFileAppender" >
+        <file>${logPath}/taxpayer-admin.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/taxpayer-admin-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>20</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>600MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <pattern>%d [%t] %-5p %c - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--<logger name="org.hibernate.SQL" level="debug" />-->
+    <logger name="org.jdbcdslog.ConnectionLogger" level="OFF" />
+    <logger name="org.jdbcdslog.ResultSetLogger" level="OFF" />
+    <logger name="jdbc.connection" level="OFF" />
+    <logger name="org.jdbcdslog.StatementLogger" level="OFF" />
+
+    <root level="info">
+        <appender-ref ref="MAIN" />
+    </root>
+</configuration>
