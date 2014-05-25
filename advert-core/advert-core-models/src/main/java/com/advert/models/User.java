@@ -48,7 +48,7 @@ public class User implements Serializable {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "zicode")
+    @Column(name = "zipcode")
     private String zipcode;
 
     @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentDateTime")

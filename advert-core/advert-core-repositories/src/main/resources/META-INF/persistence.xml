@@ -8,6 +8,10 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
         <class>com.advert.models.User</class>
+        <class>com.advert.models.Country</class>
+        <class>com.advert.models.State</class>
+        <class>com.advert.models.Role</class>
+        <class>com.advert.models.Permission</class>
     </persistence-unit>
 
 
