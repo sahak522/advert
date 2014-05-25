@@ -4,20 +4,10 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
              http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
-    <persistence-unit name="com_sflpro_taxpayer_persistence_unit" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="advertPersistenceUnit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <class>com.sflpro.taxpayer.models.dto.City</class>
-        <class>com.sflpro.taxpayer.models.dto.Company</class>
-        <class>com.sflpro.taxpayer.models.dto.CompanyData</class>
-        <class>com.sflpro.taxpayer.models.dto.DataFile</class>
-        <class>com.sflpro.taxpayer.models.dto.TaxType</class>
-        <class>com.sflpro.taxpayer.models.dto.ReferenceFile</class>
-        <class>com.sflpro.taxpayer.models.dto.Region</class>
-        <class>com.sflpro.taxpayer.models.dto.Resource</class>
-        <class>com.sflpro.taxpayer.models.dto.Founder</class>
-        <class>com.sflpro.taxpayer.models.dto.Industry</class>
-        <class>com.sflpro.taxpayer.models.dto.CompanyExtra</class>
+        <class>com.advert.models.User</class>
     </persistence-unit>
 
 
