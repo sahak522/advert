@@ -17,17 +17,17 @@
 
     <context:component-scan base-package="com.advert.services"/>
 
-    <cache:annotation-driven cache-manager="#{appProperties['advert.cacheManager']}"/>
+    <!--<cache:annotation-driven cache-manager="#{appProperties['advert.cacheManager']}"/>-->
 
-    <bean id="cacheManagerDummy" lazy-init="true" class="org.springframework.cache.support.NoOpCacheManager"/>
+    <!--<bean id="cacheManagerDummy" lazy-init="true" class="org.springframework.cache.support.NoOpCacheManager"/>-->
 
-    <bean id="cacheManagerMain" lazy-init="true" class="org.springframework.cache.ehcache.EhCacheCacheManager">
-        <property name="cacheManager" ref="ehcache"/>
-    </bean>
+    <!--<bean id="cacheManagerMain" lazy-init="true" class="org.springframework.cache.ehcache.EhCacheCacheManager">-->
+        <!--<property name="cacheManager" ref="ehcache"/>-->
+    <!--</bean>-->
 
-    <!-- EhCache library setup -->
-    <bean id="ehcache" lazy-init="true" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
-        <property name="configLocation" value="classpath:ehcache.xml"/>
-    </bean>
+    <!--&lt;!&ndash; EhCache library setup &ndash;&gt;-->
+    <!--<bean id="ehcache" lazy-init="true" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">-->
+        <!--<property name="configLocation" value="classpath:ehcache.xml"/>-->
+    <!--</bean>-->
 
 </beans>
